@@ -1,4 +1,10 @@
-.ko-popover .ko-popover-info{
+.ko-popover{
+    border: 0 dashed grey;
+    border-width: 0 0 1px 0;
+    border-bottom-color: grey;
+}
+
+.ko-popover-info{
     border-bottom-color: darkblue;
     border-bottom-width: 2px;
 }
