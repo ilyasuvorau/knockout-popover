@@ -1,0 +1,25 @@
+{
+  "name": "ko-popover",
+  "version": "0.0.1",
+  "authors": [
+    "Akim Khalilov <Akim.Khalilov@gmail.com>"
+  ],
+  "description": "Knockout custom binding for Twitter Bootstrap Popover",
+  "main": "./src/ko.bindings.popover.js",
+  "keywords": [
+    "knockout",
+    "ko",
+    "popover",
+    "twitter",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/s-stude/knockout-popover",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
