@@ -18,11 +18,17 @@
 
 (function (window, document, $, ko, undefined) {
 
-    var defaults = {
+    var
+        htmlDataAttributePrefix = 'popover-',
+        defaults = {
+            animation: undefined,
+            html: undefined,
+            placement: 'top',
+            selector: undefined,
+            trigger: 'hover',
             title: 'Default Title',
             content: 'Default content',
-            placement: 'top',
-            trigger: 'hover',
+            delay: undefined,
             container: 'body'
         };
 
@@ -54,12 +60,14 @@
 
     function initPopover(elems) {
         elems.each(function () {
-            $(this).popover($.extend({}, defaults, {
-                title: $(this).data('popover-title'),
-                content: $(this).data('popover-content'),
-                placement: $(this).data('popover-placement'),
-                trigger: $(this).data('popover-trigger')
-            }));
+
+            var dataValues = {};
+
+            for (var p in defaults) {
+                dataValues[p] = $(this).data(htmlDataAttributePrefix + p);
+            }
+
+            $(this).popover($.extend({}, defaults, dataValues));
         });
 
     }
