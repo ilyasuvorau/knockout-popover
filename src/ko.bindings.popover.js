@@ -24,8 +24,7 @@
             placement: 'top',
             trigger: 'hover',
             container: 'body'
-        },
-        cssInserted = false;
+        };
 
     ko.bindingHandlers.popover = {
 
@@ -33,11 +32,6 @@
             var $elem = $(element),
                 isPopover = valueAccessor(),
                 popoverOptions = allBindingsAccessor().popoverOptions;
-
-            if (!cssInserted) {
-                insertCustomCss();
-                cssInserted = true;
-            }
 
             if (isPopover) {
                 initPopover($elem);
@@ -68,16 +62,6 @@
             }));
         });
 
-    }
-
-    function insertCustomCss() {
-        var css = [
-            '<style>',
-            '.ko-popover{border: 0 dashed grey;border-width: 0 0 1px 0;border-bottom-color: grey;}',
-            '</style>'
-        ];
-
-        document.write(css.join(''));
     }
 
 })(window, document, jQuery, ko)
