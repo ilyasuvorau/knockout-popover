@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>knockout-popover</id>
+		<version>0.1.0</version>
+		<!-- NOTE: The real version number is set to the same version as MaryKay.SamPortal.exe by the deployment script. -->
+		<authors>Akim Khalilov</authors>
+		<owners>Akim Khalilov</owners>
+		<tags>knockoutjs popover twitter bootstrap</tags>
+		<description>
+			Knockout custom binding for Twitter Bootstrap Popover
+		</description>
+		<projectUrl>https://github.com/s-stude/knockout-popover</projectUrl>
+	</metadata>
+	<files>
+		<file src="./src/ko.bindings.popover.js" target="Scripts/" />
+	</files>
+</package>
