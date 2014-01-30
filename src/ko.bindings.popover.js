@@ -6,6 +6,7 @@
  * Knockout custom binding for Twitter Bootstrap Popover
  *
  * Created by: Akim Khalilov (https://github.com/s-stude)
+ * License: MIT
  *
  */
 
