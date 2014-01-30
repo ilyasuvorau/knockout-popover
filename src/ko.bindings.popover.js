@@ -40,34 +40,31 @@
                 popoverOptions = allBindingsAccessor().popoverOptions;
 
             if (isPopover) {
-                initPopover($elem);
+                initPopover($elem, popoverOptions);
                 return;
             }
 
-            if (!popoverOptions || !popoverOptions.elem) {
-                throw new Error('Invalid popoverOptions syntax');
+            if (popoverOptions.elem) {
+                var elems = $elem.find(popoverOptions.elem);
+
+                if (!elems) {
+                    throw new Error('Element \'$ELEM$\' was not found'.replace('$ELEM$', popoverOptions.elem));
+                }
+
+                initPopover(elems, popoverOptions);
             }
-
-            var elems = $elem.find(popoverOptions.elem);
-
-            if (!elems) {
-                throw new Error('Element $ELEM$ was not found'.replace('$ELEM$', popoverOptions.elem));
-            }
-
-            initPopover(elems);
         }
     };
 
-    function initPopover(elems) {
+    function initPopover (elems, overrides) {
         elems.each(function () {
-
             var dataValues = {};
 
             for (var p in defaults) {
                 dataValues[p] = $(this).data(htmlDataAttributePrefix + p);
             }
 
-            $(this).popover($.extend({}, defaults, dataValues));
+            $(this).popover($.extend({}, defaults, dataValues, overrides));
         });
 
     }
