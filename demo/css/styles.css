@@ -1,0 +1,34 @@
+.ko-popover{
+    border: 0 dashed grey;
+    border-width: 0 0 1px 0;
+    border-bottom-color: grey;
+}
+
+.ko-popover-info{
+    border-bottom-color: darkblue;
+    border-bottom-width: 2px;
+}
+
+.vb{
+    margin-bottom: 20px;
+}
+
+.vb-l{
+    margin-bottom: 35px;
+}
+
+.vb-xl{
+    margin-bottom: 45px;
+}
+
+.vt{
+    margin-top: 20px;
+}
+
+.vt-l{
+    margin-top: 35px;
+}
+
+.vt-xl{
+    margin-top: 45px;
+}
