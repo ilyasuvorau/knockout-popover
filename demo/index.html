@@ -3,20 +3,38 @@
 <head>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./css/prism.css"/>
     <title></title>
 </head>
 <body>
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-            <h1>Knockout-popover</h1>
+        <div class="col-lg-6 col-lg-offset-3">
+            <h1 class="text-center vb-xl">Knockout-popover</h1>
 
-            <p>
+            <h2 class="lead text-center vb-xl">
+                Simple custom binding for KnockoutJS to enable
+                    <span data-bind="popover: true"
+                          class="ko-popover"
+                          data-popover-title="Here we are!"
+                          data-popover-content="How simple can I do this? Look for demo!"
+                          data-popover-placement="right">popovers</span>
+                from Twitter Bootstrap.
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h4 class="vb">Demo:</h4>
+
+                <p>
                 This is example of how to use <span data-bind="popover: true" class="ko-popover"
                                                     data-popover-placement="bottom"
                                                     data-popover-title="knockout-popover"
-                                                    data-popover-content="Awesome knockout-popover plugin">knockout-popover</span>
+                                                    data-popover-content="Awesome knockout-popover plugin">knockout-popover</span>.
+                You can enable it by setting <code>data-bind="popover: true"</code> to any element you want, and it will
+                be independent.
             </p>
 
             <p data-bind="popover: false, popoverOptions: { elem: '.ko-popover'}">
@@ -24,14 +42,77 @@
                 <span class="ko-popover"
                       data-popover-title="knockout-popover: multiple popovers"
                       data-popover-content="Multiple popovers by single knockoutjs binding">knockout-popovers</span> for
-                all specific
+                all
 
                 <span class="ko-popover ko-popover-info"
                       data-popover-placement="right"
                       data-popover-title="So, do you like it?"
                       data-popover-content="knockout-popover with custom CSS class">
-                    child elements</span>
+                    child elements</span>, that have the defined class.
             </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h4 class="vt vb">Full code</h4>
+
+            <h5>Markup for single, or independent popover:</h5>
+
+            <p>
+                <pre><code class="language-markup">&lt;span data-bind="popover: true" class="ko-popover"
+    data-popover-placement="bottom"
+    data-popover-title="knockout-popover"
+    data-popover-content="Awesome knockout-popover plugin"&gt;
+        knockout-popover (hover over me :)
+&lt;/span&gt;</code></pre>
+            </p>
+
+            <h5>You can also use <code>popoverOptions</code> to define the properties:</h5>
+
+            <p>
+                <pre><code class="language-markup">&lt;span class="ko-popover"
+    data-bind="popover: true, popoverOptions: { title: 'JS driven title' }"
+    data-popover-placement="bottom"
+    data-popover-content="Awesome knockout-popover plugin"&gt;
+       popoverOptions will override 'data-' attribute values
+&lt;/span&gt;</code></pre>
+            </p>
+
+            <h5>The "group" of popovers:</h5>
+
+            <pre><code class="language-markup">&lt;p data-bind="popover: false, popoverOptions: { elem: '.ko-popover'}"&gt;
+        This is example of how to enable
+    &lt;span class="ko-popover"
+        data-popover-title="knockout-popover: multiple popovers"
+        data-popover-content="Multiple popovers by single knockoutjs binding"&gt;
+            knockout-popovers
+    &lt;/span&gt; for all
+    &lt;span class="ko-popover ko-popover-info"
+        data-popover-placement="right"
+        data-popover-title="So, do you like it?"
+        data-popover-content="knockout-popover with custom CSS class"&gt;
+            child elements
+    &lt;/span&gt;, that have the defined class.
+&lt;/p&gt;</code></pre>
+
+        </div>
+     </div>
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+
+            <h4 class="vt vb">Options</h4>
+
+            <p>It supports all <a href="http://getbootstrap.com/javascript/#popovers-usage">TWBS popover options</a>. You can specify them either from <code>data-</code> attributes, or
+                form <code>popoverOptions: {}</code> binding</p>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h4 class="vt vb">Let's use it!!!</h4>
+
+            <p>It's so simple :)</p>
 
         </div>
     </div>
@@ -40,7 +121,7 @@
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
+<script src="js/prism.js"></script>
 <!--ko.bindings.popover-->
 
 <script src="../src/ko.bindings.popover.js"></script>
@@ -53,6 +134,18 @@
     ko.applyBindings(vm);
 
 </script>
+<script type="text/javascript">
 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37821585-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
 </body>
 </html>

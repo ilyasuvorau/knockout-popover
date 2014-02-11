@@ -8,3 +8,27 @@
     border-bottom-color: darkblue;
     border-bottom-width: 2px;
 }
+
+.vb{
+    margin-bottom: 20px;
+}
+
+.vb-l{
+    margin-bottom: 35px;
+}
+
+.vb-xl{
+    margin-bottom: 45px;
+}
+
+.vt{
+    margin-top: 20px;
+}
+
+.vt-l{
+    margin-top: 35px;
+}
+
+.vt-xl{
+    margin-top: 45px;
+}
