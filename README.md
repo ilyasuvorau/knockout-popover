@@ -4,7 +4,7 @@
 
 ### Demo:
 
-[LINK HERE]
+[Show me the result](http://sstude.com/knockout-popover/)
 
 ### Full code
 
