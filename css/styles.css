@@ -32,3 +32,15 @@
 .vt-xl{
     margin-top: 45px;
 }
+
+.subtitle{
+    float:right;
+    font-weight: 400;
+}
+.subtitle a{
+    color: #07a;
+    text-decoration: none;
+    
+}.subtitle a:hover{
+    text-decoration: underline;
+}
